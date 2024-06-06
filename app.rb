@@ -16,7 +16,7 @@ class App < Sinatra::Base
   end
 
   def title
-    'Summer Instititue Starter App'
+    'BLENDER!'
   end
 
   get '/examples' do
@@ -25,7 +25,8 @@ class App < Sinatra::Base
 
   get '/' do
     logger.info('requsting the index')
-    @flash = session.delete(:flash) || { info: 'Welcome to Summer Institute!' }
+    @flash = session.delete(:flash) || { info: 'Time to work. 🧡' }
+
     erb(:index)
   end
 end
